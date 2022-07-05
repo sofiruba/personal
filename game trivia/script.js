@@ -1,9 +1,10 @@
 const random = (max) => { return Math.floor(Math.random() * (max - 1)) + 1; }
 
-const questions = []
+let questions = []
 
-function pickRandom(){
-    question = document.getElementById('question');
+
+function searchQuestions(){ 
+
     axios({
         method: 'GET',
         url: 'https://trivia-questions.p.rapidapi.com/trivia',
@@ -12,26 +13,33 @@ function pickRandom(){
             'X-RapidAPI-Host': 'trivia-questions.p.rapidapi.com'
         }
     }).then(response => {
-        questions = response.data
+        questions.push(response.data)
+
     }).catch(function (error) {
         console.error(error)
     })
-    num = random(100)
-    question.innerText = `${questions[num].Question}`
-    answer = document.createElement("input")
-    answer.type = "text"
-    answer.id = "answer"
+
 }
 
+function pickRandom() {
+    searchQuestions()
+    console.log(questions)
+    let question = document.getElementById('question')
+    num = random(100)
+    question.innerText = `${questions[num]}`
+   
+
+}
+/*
 function checkAnswer() {
     question = document.getElementById('question');
     answer = document.getElementById('answer')
     let i = questions.indexOf(Question = question)
-    if (answer = questions[i].Answer ){
+    if (answer = questions[i].Answer) {
         alert('correcto!')
     }
-    else{
+    else {
         alert('incorrecto')
     }
-    
-}
+
+}*/
