@@ -25,7 +25,6 @@ function searchQuestions() {
       console.error(error);
     });
 }
-
 searchQuestions();
 function pickRandom() {
   let question = document.getElementById("question");

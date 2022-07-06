@@ -1,5 +1,5 @@
 .color{
-    background: linear-gradient(60deg, whitesmoke, lightgrey)
+    background: #DFDFDF
 }
 body{
     font-family: 'Roboto', sans-serif;
@@ -20,7 +20,7 @@ body{
     margin: auto;
     display: flex;
     align-items: center;
-    border-color: olivedrab;
+    border-color: #32324B;
     border: 1px;
     background-color: rgb(223, 221, 221);
 }
@@ -37,7 +37,7 @@ nav ul li{
 }
 .title{
     font-size: 20px;
-    font-weight: 500;
+    font-weight: bolder;
 
 }
 nav ul li a{
@@ -47,14 +47,14 @@ nav ul li a{
 
 .content h1{
     font-size: 60px;
-    font-weight: 100;
+    font-weight: 400;
     margin-top: 24px;
     margin-bottom: 15px;
-    color: darkolivegreen;
+    color: #2F3061;
 }
 .content p{
     font-size: 20px;
-    color: grey;
+    color: #2F3061;
 }
 
 .content{
@@ -62,7 +62,7 @@ nav ul li a{
     margin-top:10% ;
 }
 .content .btn{
-    background:linear-gradient(45deg, olive, darkolivegreen);
+    background:#474571;
     display: inline-block;
     border-radius: 6px;
     padding: 10px 20px;
@@ -80,7 +80,9 @@ nav ul li a{
     margin: auto;
     display: flex;
     align-items: center;
-    border-color: olivedrab;
+    border-color: #32324B;
+    background: #474571;
+    color: black;
 
 }
 footer{
@@ -88,6 +90,7 @@ footer{
     padding-left: 5%;
     padding-right: 5%;
     padding-left: 10px;
+    
 }
 footer ul li{
     list-style: none;
