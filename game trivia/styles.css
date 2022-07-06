@@ -1,6 +1,9 @@
 .color{
     background: linear-gradient(60deg, whitesmoke, lightgrey)
 }
+body{
+    font-family: 'Roboto', sans-serif;
+}
 
 .container{
     height: 100vh;
