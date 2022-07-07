@@ -3,6 +3,9 @@ const random = (max) => {
 };
 
 const questions = [];
+let failed = 0
+let correct = 0
+const numbers = []
 
 function searchQuestions() {
   return axios({
@@ -25,11 +28,14 @@ function searchQuestions() {
       console.error(error);
     });
 }
+
 searchQuestions();
+
 function pickRandom() {
   let question = document.getElementById("question");
   num = random(100);
   question.innerText = `${questions[num].Question}`;
+  numbers.push(num)
   return num;
 }
 
@@ -37,10 +43,21 @@ function checkAnswer() {
   n = pickRandom();
   let answer = document.getElementById("answer").value;
   let text = document.getElementById('bool')
-  if ((answer = questions[n].Answer)) {
-    text.innerText = "Correcto";
-  } else {
-    text.innerText = "Incorrecto";
+  let correctText = document.getElementById("correct")
+  let failedText = document.getElementById("failed")
+  if ((answer === questions[n-1].Answer)) {
+    text.innerText = "Congrats!";
+    correct = correct + 1 
+  } else if (answer == "") {
+    text.innerText = "";
   }
+  else{
+    text.innerText = "Keep on working"
+    
+    failed = failed + 1
+    alert(`It was ${questions[n].Answer}`)
+  }
+  correctText.innerText = `${correct}`
+  failedText.innerText = `${failed}`
 
 }

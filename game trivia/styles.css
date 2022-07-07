@@ -1,5 +1,5 @@
 .color{
-    background: #DFDFDF
+    background: #D3C4E3;
 }
 body{
     font-family: 'Roboto', sans-serif;
@@ -80,8 +80,8 @@ nav ul li a{
     margin: auto;
     display: flex;
     align-items: center;
-    border-color: #32324B;
-    background: #474571;
+    border-color: #8F95D3;
+    background: #B1ADDB;
     color: black;
 
 }
@@ -106,3 +106,12 @@ footer ul li a img {
     width: 45px;
     height: 45%;
 }
+ .questions{
+    margin: 2%;
+
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: auto auto auto;
+  }
