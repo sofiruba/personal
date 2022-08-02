@@ -20,13 +20,16 @@
       <p>Do you know the answers?</p>
       <h2 id="question">Press the button to start!</h2>
       <div class="questions">
+        <button class="btn" type="button" onclick="PickRandom()"></button>
+      </div>
+      <div class="questions">
         <input id="answer" type="text" placeholder="your answer"/>
         <button class="btn" type="button" onclick="checkAnswer()"></button>
       </div>
       <h2 id="bool"></h2>
       <div class="grid">
         <div>
-          <h3> Fails</h3>
+          <h3>Fails</h3>
           <p id="failed"></p>
         </div>
         <div>
